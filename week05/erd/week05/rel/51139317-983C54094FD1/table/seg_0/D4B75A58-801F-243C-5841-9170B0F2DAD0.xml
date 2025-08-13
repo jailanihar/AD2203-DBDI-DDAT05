@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4B75A58-801F-243C-5841-9170B0F2DAD0" name="Group">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>EC1567A1-0E85-E9AB-62A1-E29EBD2A1F8D</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="code" id="9AF2E099-3ED3-E3AE-7615-73CDFE0F7607">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>93F70FB4-2574-4063-C12A-4A866BEC579B</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="D1E6D0A8-AE5A-6C23-202A-4033C8D4CE74">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>881C7D1A-9DA4-FBEC-7644-02D5B172DE02</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="school" id="13EEABC7-384A-D74F-1BA8-E0232811C675">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>7CED4564-146B-C675-050F-2A926FB29E30</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="intake" id="A96900F0-B745-7A65-2816-95DC5B882E0B">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>51A97CF3-83F9-B1BE-B34D-5A0817670F2A</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AFA9EE99-2F3A-8CF4-3540-19A7B112AA0D" name="Group_PK">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>BC530872-848F-187F-63BA-CAC645FED055</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AF2E099-3ED3-E3AE-7615-73CDFE0F7607"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

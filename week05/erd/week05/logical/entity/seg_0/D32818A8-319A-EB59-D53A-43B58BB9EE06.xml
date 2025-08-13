@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D32818A8-319A-EB59-D53A-43B58BB9EE06" name="Module">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 01:46:27 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<engineerTo>
+<item key="51139317-D63D-19BE-A19E-983C54094FD1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="code" id="C581F7C0-B6B5-585F-B562-3A885A48C662">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 01:49:21 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<engineerTo>
+<item key="51139317-D63D-19BE-A19E-983C54094FD1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="362938EA-40B0-F4FE-6D38-1E5952CDA58D">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 01:49:43 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<engineerTo>
+<item key="51139317-D63D-19BE-A19E-983C54094FD1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F11B5066-5904-6522-E167-57DADDF05A02" name="Module PK">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 01:52:19 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<engineerTo>
+<item key="51139317-D63D-19BE-A19E-983C54094FD1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C581F7C0-B6B5-585F-B562-3A885A48C662</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

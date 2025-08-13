@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="15818562-AB55-3FD3-9B82-0302653EB624" name="group_module_rel">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Group_code" id="876AE2CF-7BE2-EDE8-236B-BE215B7211AD">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A96270C-4297-1C50-0198-E2364443F64A" referredColumn="9AF2E099-3ED3-E3AE-7615-73CDFE0F7607"/>
+</associations>
+</Column>
+<Column name="Module_code" id="273DAFB5-115B-BF9D-C459-5E415FB5D954">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C074FDF-4D98-1D8D-60F5-F6DED42052F8" referredColumn="21E041F3-1563-5B79-2FBA-309E82019CA6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D10CC87-5433-EE3D-CF22-C21B9B065E5B" name="group_module_rel_PK">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<ownerDesignName>week05</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="876AE2CF-7BE2-EDE8-236B-BE215B7211AD"/>
+<colUsage columnID="273DAFB5-115B-BF9D-C459-5E415FB5D954"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="945FA847-016F-72A9-B5F0-C7E316D180C3" name="group_module_rel_Group_FK">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>4E76E567-E6F8-BCF3-9167-9950BFFEC832</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="876AE2CF-7BE2-EDE8-236B-BE215B7211AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4FBF2B0-30AA-C6A9-36A2-C2AC4762C9EF" name="group_module_rel_Module_FK">
+<createdBy>jailanihar</createdBy>
+<createdTime>2025-08-06 02:04:30 UTC</createdTime>
+<generatorID>4E76E567-E6F8-BCF3-9167-9950BFFEC832</generatorID>
+<ownerDesignName>week05</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="273DAFB5-115B-BF9D-C459-5E415FB5D954"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
