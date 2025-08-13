@@ -125,3 +125,35 @@ gm.module_code, m.name
 FROM groups_modules gm, modules m
 WHERE gm.module_code=m.code
 AND gm.group_code='DDAT05';
+
+SELECT gm.group_code,
+gm.module_code, m.name
+FROM groups_modules gm, modules m
+WHERE gm.module_code=m.code
+AND gm.group_code='DDAT05'
+AND gm.sem_no=2;
+
+-- One student can have only one next of kin
+-- One next of kin can only have one student
+-- Doing it differently from ERD
+-- In this case, student_id is referred and set as UNIQUE.
+CREATE TABLE next_of_kins (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    relation VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(255) NOT NULL,
+    student_id CHAR(9) UNIQUE NOT NULL,
+    FOREIGN KEY(student_id) references students(id)
+);
+
+INSERT INTO next_of_kins
+(name, relation, phone_number, student_id)
+VALUES ('Emak', 'Mother', '8901234', '24FTT1234'),
+('Fatimah', 'Mother-in-law', '8715644', '24FTT2345');
+
+-- This statement will cause an error
+-- Due to 24FTT1234 already exist in next_of_kins table
+-- INSERT INTO next_of_kins
+-- (name, relation, phone_number, student_id)
+-- VALUES ('Geli', 'Brother', '8755121', '24FTT1234');
+

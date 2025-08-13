@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="week05" id="2B7A7D63-E2F7-11E4-2573-8373A3828128" version="3.5">
-<createdBy>jailanihar</createdBy>
-<createdTime>2025-08-02 00:06:45 UTC</createdTime>
-<ownerDesignName>week03</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>2B7A7D63-E2F7-11E4-2573-8373A3828128</designId>
-</OSDM_Design>
