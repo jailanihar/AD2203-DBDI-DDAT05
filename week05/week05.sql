@@ -93,46 +93,6 @@ INSERT INTO modules VALUES
 ('AD2203', 'Database Design and Implementations'),
 ('AD2204', 'Python Programming');
 
-CREATE TABLE groups_modules (
-    group_code VARCHAR(10),
-    module_code CHAR(6),
-    sem_no INT NOT NULL,
-    PRIMARY KEY(group_code, module_code),
-    FOREIGN KEY (group_code) REFERENCES pbgroups(code),
-    FOREIGN KEY (module_code) REFERENCES modules(code)
-);
-
-INSERT INTO groups_modules VALUES
-('DDAT05','GS1108', 1),('DCNG05','GS1108', 2),
-('DDAT05','GS1113', 2),('DCNG05','GS1113', 1),
-('DDAT05','AD2203', 2),('DDAT05','AD2204', 2);
-
--- This insert is invalid because duplicate
--- group and module codes combination
--- INSERT INTO groups_modules VALUES
--- ('DDAT05', 'GS1108');
-
-SELECT * FROM groups_modules;
-
-SELECT groups_modules.group_code,
-groups_modules.module_code, modules.name
-FROM groups_modules, modules
-WHERE groups_modules.module_code=modules.code
-AND groups_modules.group_code='DDAT05';
-
-SELECT gm.group_code,
-gm.module_code, m.name
-FROM groups_modules gm, modules m
-WHERE gm.module_code=m.code
-AND gm.group_code='DDAT05';
-
-SELECT gm.group_code,
-gm.module_code, m.name
-FROM groups_modules gm, modules m
-WHERE gm.module_code=m.code
-AND gm.group_code='DDAT05'
-AND gm.sem_no=2;
-
 -- One student can have only one next of kin
 -- One next of kin can only have one student
 -- Doing it differently from ERD
@@ -157,3 +117,77 @@ VALUES ('Emak', 'Mother', '8901234', '24FTT1234'),
 -- (name, relation, phone_number, student_id)
 -- VALUES ('Geli', 'Brother', '8755121', '24FTT1234');
 
+CREATE TABLE lecturers (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    school VARCHAR(255) NOT NULL,
+    manager_id INT,
+    FOREIGN KEY (manager_id) REFERENCES lecturers(id)
+);
+
+INSERT INTO lecturers (name, school, manager_id) VALUES
+('Sir Tak', 'SICT', NULL), ('Miss Fifah', 'SICT', 1),
+('Miss Atiqah', 'SICT', 1), ('Jai', 'SICT', 2),
+('Sir Khalid', 'SICT', 3), ('Miss Farrah', 'SICT', 2),
+('Sir Waqi', 'SICT', 6);
+
+SELECT * from lecturers;
+
+-- DELETE FROM lecturers where id=7;
+
+-- INSERT INTO lecturers (name, school, manager_id) VALUES
+-- ('Sir Waqi', 'SICT', 6);
+
+SELECT lecturer.id, lecturer.name, manager.name AS manager
+FROM lecturers lecturer, lecturers manager
+WHERE manager.id=lecturer.manager_id OR lecturer.manager_id IS NULL;
+
+CREATE TABLE groups_modules (
+    group_code VARCHAR(10),
+    module_code CHAR(6),
+    sem_no INT NOT NULL,
+    lecturer_id INT NOT NULL,
+    PRIMARY KEY(group_code, module_code),
+    FOREIGN KEY (group_code) REFERENCES pbgroups(code),
+    FOREIGN KEY (module_code) REFERENCES modules(code),
+    FOREIGN KEY (lecturer_id) REFERENCES lecturers(id)
+);
+
+INSERT INTO groups_modules VALUES
+('DDAT05','GS1108', 1, 1),('DCNG05','GS1108', 2, 2),
+('DDAT05','GS1113', 2, 1),('DCNG05','GS1113', 1, 3),
+('DDAT05','AD2203', 2, 4),('DDAT05','AD2204', 2, 5);
+
+-- This insert is invalid because duplicate
+-- group and module codes combination
+-- INSERT INTO groups_modules VALUES
+-- ('DDAT05', 'GS1108', 2, 1);
+
+SELECT * FROM groups_modules;
+
+SELECT groups_modules.group_code,
+groups_modules.module_code, modules.name
+FROM groups_modules, modules
+WHERE groups_modules.module_code=modules.code
+AND groups_modules.group_code='DDAT05';
+
+SELECT gm.group_code,
+gm.module_code, m.name
+FROM groups_modules gm, modules m
+WHERE gm.module_code=m.code
+AND gm.group_code='DDAT05';
+
+SELECT gm.group_code,
+gm.module_code, m.name
+FROM groups_modules gm, modules m
+WHERE gm.module_code=m.code
+AND gm.group_code='DDAT05'
+AND gm.sem_no=2;
+
+SELECT gm.group_code,
+gm.module_code, m.name, l.name AS lecturer
+FROM groups_modules gm, modules m, lecturers l
+WHERE gm.module_code=m.code
+AND gm.group_code='DDAT05'
+AND gm.sem_no=2
+AND gm.lecturer_id=l.id;
