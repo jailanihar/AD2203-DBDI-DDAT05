@@ -22,6 +22,11 @@ CREATE TABLE lecturers (
 INSERT INTO users VALUES
 ('24FTT1234', SHA2('123456', 256), 'student');
 
+INSERT INTO users VALUES
+('jailani.rahman', SHA2('123456', 256), 'lecturer');
+
+SELECT * FROM users;
+
 SELECT username, role FROM users 
 WHERE username='24FTT1234'
 AND password=SHA2('123456', 256);
